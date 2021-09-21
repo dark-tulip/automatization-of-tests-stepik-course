@@ -17,15 +17,7 @@ def browser(request):
         'prefs', {'intl.accept_languages': page_language})
 
     browser = webdriver.Chrome(options=options)
-
-    if page_language == "ru":
-        print(f"\nLanguage RUSSIAN selected for test..")
-    elif page_language == "es":
-        print(f"\nLanguage SPANISH selected for test..")
-    elif page_language == "fr":
-        print(f"\nLanguage FRENCH selected for test..")
-    else:
-        print(f"\nLanguage {page_language} by default ENG selected for test..")
+    print(f"\nLanguage {page_language} selected for test..")
 
     yield browser
 

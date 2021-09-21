@@ -1,0 +1,13 @@
+attrs==21.2.0
+autopep8==1.5.7
+iniconfig==1.1.1
+packaging==21.0
+pluggy==1.0.0
+py==1.10.0
+pycodestyle==2.7.0
+pyparsing==2.4.7
+pytest==6.2.5
+selenium==3.141.0
+toml==0.10.2
+urllib3==1.26.6
+wget==3.2

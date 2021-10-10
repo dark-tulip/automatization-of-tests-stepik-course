@@ -63,25 +63,6 @@ class ProductPage(BasePage):
             'Element IS NOT disappeared'
 
 
-    def add_product_to_basket_with_quiz(self):
-        """ 
-        Проверка нажатия на кнопку ADD_TO_BASKET_BUTTON 
-        Ожидаемый результат: 
-        1)Сообщение о том, что товар добавлен в корзину. Название товара в сообщении должно совпадать с тем товаром, который вы действительно добавили.
-        2)Сообщение со стоимостью корзины. Стоимость корзины совпадает с ценой товара. 
-        """
-        self.should_be_name_of_product()
-        self.should_be_price_of_product()
-        self.should_be_add_to_basket_button()
-
-        add_to_busket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
-        add_to_busket_button.click()
-
-        self.solve_quiz_and_get_code()
-        self.should_be_msg_about_adding()
-        self.compare_basket_and_product_price()
-
-
     def add_product_to_basket(self):
         """ 
         Проверка нажатия на кнопку ADD_TO_BASKET_BUTTON 
@@ -95,3 +76,10 @@ class ProductPage(BasePage):
 
         add_to_busket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
         add_to_busket_button.click()
+
+
+    def add_product_to_basket_with_quiz(self):
+        self.add_product_to_basket()
+        self.solve_quiz_and_get_code()
+        self.should_be_msg_about_adding()
+        self.compare_basket_and_product_price()

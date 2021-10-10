@@ -1,4 +1,5 @@
 [
+  "test_main_page.py::test_guest_cant_see_product_in_basket_opened_from_main_page",
   "test_product_page.py::test_guest_can_add_product_to_basket",
   "test_product_page.py::test_guest_can_add_product_to_basket[0]",
   "test_product_page.py::test_guest_can_add_product_to_basket[1]",
@@ -20,6 +21,7 @@
   "test_product_page.py::test_guest_can_add_product_to_basket[http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer7]",
   "test_product_page.py::test_guest_can_add_product_to_basket[http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8]",
   "test_product_page.py::test_guest_can_add_product_to_basket[http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9]",
+  "test_product_page.py::test_guest_cant_see_product_in_basket_opened_from_product_page",
   "test_product_page.py::test_guest_cant_see_success_message",
   "test_product_page.py::test_guest_cant_see_success_message[207]",
   "test_product_page.py::test_guest_cant_see_success_message_after_adding_product_to_basket",

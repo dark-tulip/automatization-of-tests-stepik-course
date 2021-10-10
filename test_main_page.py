@@ -2,9 +2,9 @@
 
 # pytest -v --tb=line --language=en test_main_page.py
 
-
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
+
 
 
 def test_guest_can_go_to_login_page(browser):

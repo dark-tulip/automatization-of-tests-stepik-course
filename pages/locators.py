@@ -6,7 +6,7 @@ class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-class LoginPageLocators():   
+class LoginPageLocators():
     # 1. В файле locators.py создайте класс LoginPageLocators
     # 2. Подберите селекторы к формам регистрации и логина, добавьте их в класс LoginPageLocators
     LOGIN_FORM = (By.CSS_SELECTOR, "form#login_form")
@@ -20,3 +20,4 @@ class ProductPageLocators():
 
     MESSAGE_ABOUT_ADDING = (By.CSS_SELECTOR, 'div.alert:nth-child(1) strong')
     BASKET_PRICE = (By.CSS_SELECTOR, '.alertinner p strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, 'div.alert:nth-child(1)')

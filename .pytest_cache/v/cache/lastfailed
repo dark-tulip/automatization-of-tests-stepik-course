@@ -1,3 +1,8 @@
 {
-  "test_main_page.py::test_guest_can_go_to_login_page": true
+  "test_product_page.py::test_guest_can_add_product_to_basket": true,
+  "test_product_page.py::test_guest_cant_see_success_message": true,
+  "test_product_page.py::test_guest_cant_see_success_message_after_adding_product_to_basket": true,
+  "test_product_page.py::test_guest_cant_see_success_message_after_adding_product_to_basket[207]": true,
+  "test_product_page.py::test_message_disappeared_after_adding_product_to_basket": true,
+  "test_product_page.py::test_message_disappeared_after_adding_product_to_basket[207]": true
 }

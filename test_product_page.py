@@ -1,13 +1,46 @@
 from .pages.product_page import ProductPage
+import pytest
+
+# @pytest.mark.parametrize('link', [0, 1, 2, 3, 4, 5, 6,
+#                                   pytest.param(7, marks=pytest.mark.xfail),
+#                                   8, 9])
+# def test_guest_can_add_product_to_basket(browser, link):
+#     PRODUCT_URL = ('http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{}'.format(link))
+
+#     product_page = ProductPage(browser, PRODUCT_URL)
+#     product_page.open()
+#     product_page.add_product_to_basket()
 
 
-def test_guest_can_add_product_to_basket(browser):
-    '''
-        Тест кейс для проверки того, что юзер может добавить продукт в корзину
-    '''
-    link = "http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=newYear"
-    link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019'
-
-    product_page = ProductPage(browser, link)
+@pytest.mark.parametrize('link', [207])
+def test_guest_cant_see_success_message_after_adding_product_to_basket(browser, link):
+    PRODUCT_URL = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_{link}'
+    # Открываем страницу товара 
+    # Добавляем товар в корзину 
+    # Проверяем, что нет сообщения об успехе с помощью is_not_element_present
+    product_page = ProductPage(browser, PRODUCT_URL)
     product_page.open()
     product_page.add_product_to_basket()
+    product_page.should_not_be_success_message()
+
+
+@pytest.mark.parametrize('link', [207])
+def test_guest_cant_see_success_message(browser, link): 
+    PRODUCT_URL = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_{link}'
+    # Открываем страницу товара 
+    # Проверяем, что нет сообщения об успехе с помощью is_not_element_present
+    product_page = ProductPage(browser, PRODUCT_URL)
+    product_page.open()
+    product_page.should_not_be_success_message()
+
+
+@pytest.mark.parametrize('link', [207])
+def test_message_disappeared_after_adding_product_to_basket(browser, link): 
+    PRODUCT_URL = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_{link}'
+    # Открываем страницу товара
+    # Добавляем товар в корзину
+    # Проверяем, что нет сообщения об успехе с помощью is_disappeared
+    product_page = ProductPage(browser, PRODUCT_URL)
+    product_page.open()
+    product_page.add_product_to_basket()
+    product_page.is_element_disappeared()

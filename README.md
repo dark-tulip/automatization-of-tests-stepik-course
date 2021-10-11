@@ -2,7 +2,7 @@
  
 Репозиторий для финального задания из степика. Как же я рада дойти до этого пункта =D
 ###### For reviewers:
-Go to the current directory file and run it:
+Go to the current directory and run it:
 ```
 pytest -v --tb=line --language=en -m need_review
 ```

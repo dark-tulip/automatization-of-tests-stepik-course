@@ -1,4 +1,4 @@
-from selenium.common.exceptions import NoAlertPresentException  # в начале файла
+from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.common.by import By
 
 from .base_page import BasePage

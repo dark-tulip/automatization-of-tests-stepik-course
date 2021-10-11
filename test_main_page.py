@@ -11,7 +11,6 @@ class TestLoginFromMainPage():
         link = "http://selenium1py.pythonanywhere.com/"
         page = MainPage(browser, link)
 
-        # Открываем страницу логина и регистрации
         page.open()
         page.go_to_login_page()
 

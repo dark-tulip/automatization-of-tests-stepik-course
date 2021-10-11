@@ -8,5 +8,5 @@ pytest -v --tb=line --language=en -m need_review
 ```
 To run all test_some_page.py run command:
 ```
-pytest -v --tb=line --language=en
+pytest -v --tb=line
 ```

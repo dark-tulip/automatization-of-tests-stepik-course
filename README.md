@@ -2,13 +2,13 @@
  
 Репозиторий для финального задания из степика. Как же я рада дойти до этого пункта =D
 ###### For reviewers:
-Go to the current file and run it:
+Go to the current directory file and run it:
 ```
 pytest -v --tb=line --language=en -m need_review
 ```
 ![image](https://user-images.githubusercontent.com/89765480/136775131-cea5c2d7-f7d8-40d7-b9c1-ba05735db663.png)
 
-To run all test_some_page.py run command:
+To run all test_some_page.py files run command:
 ```
 pytest -v --tb=line
 ```
